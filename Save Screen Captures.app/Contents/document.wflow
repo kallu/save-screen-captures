@@ -60,11 +60,13 @@
 				<dict>
 					<key>COMMAND_STRING</key>
 					<string>#!/bin/bash
-if [ -d "$@" ]; then finderPath="$@";
-elif [ -f "$@" ]; then finderPath=$(dirname "$@");
-fi
 
-[ -z "$finderPath" ] &amp;&amp; finderPath="~/Desktop"
+finderPath=`osascript -e 'tell application "Finder" to get the POSIX path of (target of front window as alias)'`
+if [ ! -z "$1" ]; then
+  if [ -d "$@" ]; then finderPath="$@";
+  elif [ -f "$@" ]; then finderPath=$(dirname "$@");
+  fi
+fi
 
 defaults write com.apple.screencapture location "$finderPath"
 killall SystemUIServer
@@ -183,7 +185,7 @@ echo "$finderPath"</string>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>456.000000:252.000000</string>
+				<string>456.000000:370.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -293,7 +295,7 @@ echo "$finderPath"</string>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>456.000000:355.000000</string>
+				<string>456.000000:473.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Set Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -430,7 +432,7 @@ echo "$finderPath"</string>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>456.000000:544.000000</string>
+				<string>456.000000:662.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Display Notification.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -440,19 +442,19 @@ echo "$finderPath"</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>8728A24B-E94A-4BA3-BC6B-6B5D43F4C5C0</key>
-		<dict>
-			<key>from</key>
-			<string>479017FC-06A1-470B-86BB-252FAA8DE378 - 479017FC-06A1-470B-86BB-252FAA8DE378</string>
-			<key>to</key>
-			<string>183B3929-44D2-4918-81FC-8D3D13C8A6EE - 183B3929-44D2-4918-81FC-8D3D13C8A6EE</string>
-		</dict>
-		<key>C3E1C1D8-7C5F-4E7F-945F-399D50CF6A43</key>
+		<key>8D10FC04-0975-4DC2-9D4C-DEE7954AECD7</key>
 		<dict>
 			<key>from</key>
 			<string>183B3929-44D2-4918-81FC-8D3D13C8A6EE - 183B3929-44D2-4918-81FC-8D3D13C8A6EE</string>
 			<key>to</key>
 			<string>5C5C6903-4E6A-417F-B12A-13AD34AD3EC7 - 5C5C6903-4E6A-417F-B12A-13AD34AD3EC7</string>
+		</dict>
+		<key>D66CCF03-0467-4797-B30F-BECA30A0B11C</key>
+		<dict>
+			<key>from</key>
+			<string>479017FC-06A1-470B-86BB-252FAA8DE378 - 479017FC-06A1-470B-86BB-252FAA8DE378</string>
+			<key>to</key>
+			<string>183B3929-44D2-4918-81FC-8D3D13C8A6EE - 183B3929-44D2-4918-81FC-8D3D13C8A6EE</string>
 		</dict>
 	</dict>
 	<key>variables</key>

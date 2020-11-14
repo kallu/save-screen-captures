@@ -60,10 +60,17 @@
 				<dict>
 					<key>COMMAND_STRING</key>
 					<string>#!/bin/bash
-if [ -d "$@" ]; then finderPath="$@";
-elif [ -f "$@" ]; then finderPath=$(dirname "$@");
+
+finderPath=`osascript -e 'tell application "Finder" to get the POSIX path of (target of front window as alias)'`
+if [ ! -z "$1" ]; then
+  if [ -d "$@" ]; then finderPath="$@";
+  elif [ -f "$@" ]; then finderPath=$(dirname "$@");
+  fi
 fi
 
+defaults write com.apple.screencapture location "$finderPath"
+killall SystemUIServer
+echo "$finderPath"
 [ -z "$finderPath" ] &amp;&amp; finderPath="~/Desktop"
 
 defaults write com.apple.screencapture location "$finderPath"
@@ -440,14 +447,14 @@ echo "$finderPath"</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>3ABE0DD9-4773-4985-9872-36B5C83BC973</key>
+		<key>36D21A34-6C6B-4F11-8A45-2EE8E1064343</key>
 		<dict>
 			<key>from</key>
 			<string>479017FC-06A1-470B-86BB-252FAA8DE378 - 479017FC-06A1-470B-86BB-252FAA8DE378</string>
 			<key>to</key>
 			<string>183B3929-44D2-4918-81FC-8D3D13C8A6EE - 183B3929-44D2-4918-81FC-8D3D13C8A6EE</string>
 		</dict>
-		<key>B577A5E8-9A09-4F1B-ACA9-4C5A962AD748</key>
+		<key>CBDAAF24-33AD-4ADE-9EC8-1DA187AE4868</key>
 		<dict>
 			<key>from</key>
 			<string>183B3929-44D2-4918-81FC-8D3D13C8A6EE - 183B3929-44D2-4918-81FC-8D3D13C8A6EE</string>
