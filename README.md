@@ -1,5 +1,4 @@
-# save-screen-captures
-OSX automator application/action for setting screen capture folder.
+# OSX automator application for setting screen capture folder.
 
 ### Index
 * ```Save Screen Captures.app``` - Automator application that sets folder for screen captures.
