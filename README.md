@@ -27,5 +27,5 @@ Quick Action is installed by double clicking the ```Save Screen Captures Action`
 
 ### References
 
-[How to Add “Console Here” Button to Finders Toolbar, or Any Other Action Button](https://medium.com/@n1kk/how-to-add-console-here-button-to-finder-toolbar-or-any-other-action-button-84dae9c34891)
-[Change the Screen Shot Save File Location in Mac OS X](https://osxdaily.com/2011/01/26/change-the-screenshot-save-file-location-in-mac-os-x/)
+* [How to Add “Console Here” Button to Finders Toolbar, or Any Other Action Button](https://medium.com/@n1kk/how-to-add-console-here-button-to-finder-toolbar-or-any-other-action-button-84dae9c34891)
+* [Change the Screen Shot Save File Location in Mac OS X](https://osxdaily.com/2011/01/26/change-the-screenshot-save-file-location-in-mac-os-x/)
