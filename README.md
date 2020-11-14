@@ -18,6 +18,13 @@ Quick Action is installed by double clicking the ```Save Screen Captures Action`
 
 ![finder toolbar screenshot](./toolbar-screenshot.png)
 
+### TODO
+
+* Now the only way to restore default setting (saving screen captures to desktop) is either open Desktop in Finder and click toolbar icon, or drop a file from desktop to application icon. If it would be possible to detect if application is run from toolbar, it would be nice to have restore function when application icon is double-clicked. Unfornately it seems there is no way to tell the differencem between toolbar and ´normal´ execution.
+
+* Toolbar icon should have OSX native look.
+
+
 ### References
 
 [How to Add “Console Here” Button to Finders Toolbar, or Any Other Action Button](https://medium.com/@n1kk/how-to-add-console-here-button-to-finder-toolbar-or-any-other-action-button-84dae9c34891)
