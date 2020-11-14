@@ -1,5 +1,10 @@
 # OSX application for setting screen capture folder
 
+Note that you can [set the screen capture folder](https://www.macworld.co.uk/how-to/change-where-mac-screenshots-saved-3682381/)
+when using the native Screenshot -application, but if you are taking screen captures with keyboard shortcut
+<kbd>Shift</kbd><kbd>Command</kbd><kbd>4</kbd>, it can be handy to have Finder toolbar icon
+for setting tge save folder.
+
 ### Index
 * ```Save Screen Captures.app``` - Automator application that sets folder for screen captures.
 * ```Save Screen Captures Action.workflow``` - Finder Quick Action workflow to set folder for screen captures.
@@ -29,3 +34,4 @@ Quick Action is installed by double clicking the ```Save Screen Captures Action`
 
 * [How to Add “Console Here” Button to Finders Toolbar, or Any Other Action Button](https://medium.com/@n1kk/how-to-add-console-here-button-to-finder-toolbar-or-any-other-action-button-84dae9c34891)
 * [Change the Screen Shot Save File Location in Mac OS X](https://osxdaily.com/2011/01/26/change-the-screenshot-save-file-location-in-mac-os-x/)
+* [How to change where Mac screenshots are saved](https://www.macworld.co.uk/how-to/change-where-mac-screenshots-saved-3682381/)
